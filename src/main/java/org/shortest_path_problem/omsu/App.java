@@ -31,7 +31,8 @@ public class App {
                     sc.nextLine();
                 }
             }
-            File file = new File("src/main/java/org/shortest_path_problem/omsu/utilities/Input.txt");
+            File file = new File("Input.txt");
+            if (!file.exists()) { file.createNewFile(); }
             switch (appMode) {
                 case 1:
                     int inputMode = 0;

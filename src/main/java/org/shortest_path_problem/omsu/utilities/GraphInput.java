@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class GraphInput {
     public static double[][] randomInput(int size) {
-        try(FileWriter writer = new FileWriter("src/main/java/org/shortest_path_problem/omsu/utilities/Input.txt")){
+        try(FileWriter writer = new FileWriter("Input.txt")){
             double[][] graph = new double[size][size];
             Random rand = new Random();
             double probability = 0.15;
@@ -48,7 +48,7 @@ public class GraphInput {
         class NotZeroWeightsException extends Exception{}
 
         try{
-            scanner = new Scanner(new File("src/main/java/org/shortest_path_problem/omsu/utilities/Input.txt"));
+            scanner = new Scanner(new File("Input.txt"));
             ArrayList<String> lines = new ArrayList<>();
             int size = 0;
             String line;

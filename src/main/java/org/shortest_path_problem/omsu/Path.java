@@ -63,6 +63,11 @@ public class Path {
         while(s != t) {
             t = matrices.getPointers()[s][t];
             path.add(t);
+            if (matrices.getDistances()[t][t] < 0) {
+                path.clear();
+                path.add(s);
+                return new PathAndDistance(path, Double.NEGATIVE_INFINITY);
+            }
         }
         Collections.reverse(path);
         return new PathAndDistance(path, distance);
